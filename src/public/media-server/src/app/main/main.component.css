@@ -1,0 +1,10 @@
+main {
+    margin-left: 17rem;
+    padding: 1rem;
+  }
+
+@media only screen and (max-width: 600px) {
+    main {
+      margin: 0;
+    }
+  }

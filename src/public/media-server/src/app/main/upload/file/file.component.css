@@ -1,0 +1,112 @@
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30pw;
+    height: auto;
+}
+progress[value]::-webkit-progress-bar {
+    background-color:var(--bg-primary);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    padding: 8px;
+    border-radius: 15px;
+}
+progress[value]::-webkit-progress-value {
+    background-image:
+        -webkit-linear-gradient(top, rgba(255,255,255,0.25), rgba(0,0,0,0.25)),
+        -webkit-linear-gradient(left, var(--accent-secondary), var(--accent-primary));
+        border-radius: 7px; 
+        background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+    width: 0px;
+}
+.custom-file-input[value]{
+    border: 1px solid var(--accent-secondary);
+}
+.custom-file-input[value]::before{
+    content: attr(value);
+}
+.custom-file-input::before {
+    content: 'Select some files';
+    display: inline-block;
+    background: var(--bg-primary);
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    border-radius: 3px;
+    color:  var(--accent-secondary);
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.custom-file-input:hover::before {
+    color: var(--bg-primary);
+    background: var(--accent-secondary);
+}
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #000000, #000000);
+}
+.custom-file-input{
+    border-radius: 15px;
+    opacity: 1;
+    height: auto;
+    width: 25vw;
+    overflow: hidden;
+}
+.custom-file-input:focus {
+    outline: none;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.upload{
+    background: var(--bg-primary);
+    color: var(--accent-secondary);
+    margin-left: 20px;
+    border: none;
+    border-radius: 15px;
+    transition: background-color 0.5s ease;
+}
+.upload:hover {
+    background: var(--accent-secondary);
+    color: var(--bg-primary);
+}
+.upload:focus {
+    outline: none;
+    border: none;
+}
+
+.hide{
+    display: none;
+}
+
+.title{
+    text-align: center;
+    margin: auto 0px;
+    width: 100px;
+    color: var(--accent-primary);;
+}
+
+@keyframes appear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+} 
+.icon {
+    color: var(--accent-primary);
+    animation: appear 1s ease normal;
+}
+svg{
+    width: 1.6rem;
+    margin-bottom: 6px;
+    margin-left: 6px;
+}
